@@ -171,7 +171,15 @@ document.addEventListener('DOMContentLoaded', function() {
         toggle.addEventListener('click', function() {
             const expanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !expanded);
-            nav.style.display = expanded ? 'none' : 'flex';
+            nav.classList.toggle('show');
+        });
+
+        // Close mobile nav when clicking a link
+        nav.querySelectorAll('.navbar-link').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('show');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
         });
     }
 
