@@ -1,0 +1,47 @@
+# SakuKu - .gitignore
+# Dependencies
+vendor/
+node_modules/
+
+# Environment
+.env
+.env.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+storage/logs/
+
+# Cache
+*.cache
+bootstrap/cache/
+
+# Database
+*.sqlite
+*.db
+
+# Uploads
+uploads/
+public/uploads/
+
+# Temporary files
+*.tmp
+*.temp
+test_*.php
+
+# Design system (generated)
+design-system/
+
+# IDE/Editor
+*.sublime-project
+*.sublime-workspace
