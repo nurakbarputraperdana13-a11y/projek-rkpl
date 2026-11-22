@@ -9,6 +9,9 @@ if (!function_exists('requireAuth')) {
 if (!function_exists('formatRupiah')) {
     require_once __DIR__ . '/helpers.php';
 }
+if (!function_exists('csrfField')) {
+    require_once __DIR__ . '/csrf.php';
+}
 
 $userId = getCurrentUserId();
 $userName = getCurrentUserName();
